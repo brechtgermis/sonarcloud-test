@@ -1,4 +1,4 @@
-# sonarcloud-test
+# sonarcloud-test - update
 This project is intended to teach beginners working with sonarQube and sonarCloud.
 This is based on public repo maegges65/junit-tests (commit 8b662e3).
 
