@@ -51,8 +51,17 @@ public class TestController {
 		_controller.singleDecision();
 		verify(_actor).moveMotor(5);
 
-		// ...
+		// 3. not bright, too warm
+		when(_sensor.getBrightness()).thenReturn(5);
+		when(_sensor.getTemperature()).thenReturn(30);
+		_controller.singleDecision();
+		verify(_actor).moveMotor(-15);
 
+		// 4. not bright, too cold
+		when(_sensor.getBrightness()).thenReturn(5);
+		when(_sensor.getTemperature()).thenReturn(15);
+		_controller.singleDecision();
+		verify(_actor).moveMotor(0);
 	}
 
 }

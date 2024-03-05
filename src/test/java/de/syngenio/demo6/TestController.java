@@ -69,7 +69,6 @@ public class TestController {
 		when(_sensor.getTemperature()).thenReturn(15);
 		_controller.singleDecision();
 		verify(_actor).moveMotor(0);
-
 	}
 
 }
