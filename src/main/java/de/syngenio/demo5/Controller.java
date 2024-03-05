@@ -15,8 +15,10 @@ public class Controller {
 	public void singleDecision() {
 		try {
 			if (_sensor.isMotorBlocked()) {
-				_actor.stopMotor();
-				throw new RuntimeException("Motor blocked, stopping system!");
+				if(_actor.stopMotor()){
+					throw new RuntimeException("Motor blocked, stopping system!");
+				}
+				
 			} else {
 				int desiredTemperature;
 				if (_sensor.getBrightness() < 10) {
