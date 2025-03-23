@@ -4,11 +4,11 @@ This is based on public repo maegges65/junit-tests (commit 8b662e3).
 
 ## Project Structure
 Example Code is found in `src/main/java`, the associated tests can be found in `src/test/java`, dependencies are declared in `build.gradle`.
-If you use IntelliJ&rt;, a simple import from gradle should suffice, for eclipse a 
+If you use IntelliJ&rt;, a simple import from gradle should suffice, for eclipse a
 
 	./gradlew eclipse
-	
-is suggested. 
+
+is suggested.
 
 ## Free Use
 This repository may be used freely, providing that changes are not comitted on the master branch.
@@ -26,7 +26,7 @@ This has a simple class with a method whose logic depends solely on the method's
 
 ### demo2
 
-A hypothetical example of a servo system with actors and sensors, where the latter are described as interfaces. 
+A hypothetical example of a servo system with actors and sensors, where the latter are described as interfaces.
 
 The test class demonstrates the use of mocks and verification of method calls.
 
@@ -52,12 +52,11 @@ The test class demonstrate how to test behaviour for exceptions.
 
 Based on demo3, but uses `Mockito.mockConstruction()` to mock constructors and verify method calls.
 
-### demo7 
+### demo7
 
 A simple example to demonstrate the the use of inorder verification.
 
 ### robot
 
-A simple example of a hyptothetical robot that moves along a rectangular spiral outwards. 
+A simple example of a hyptothetical robot that moves along a rectangular spiral outwards.
 Look at the branch `refactoring` to see how this setup can be used for reactoring.
-
