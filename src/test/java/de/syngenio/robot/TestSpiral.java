@@ -12,44 +12,44 @@ import org.mockito.junit.jupiter.MockitoExtension;
 @ExtendWith(MockitoExtension.class)
 public class TestSpiral {
 	
-	@Mock private Robot _robot;
-	private Spiral _spiral;
+	@Mock private Robot robot;
+	private Spiral spiral;
 
 	@BeforeEach
 	public void setUp() {
-		_spiral = new Spiral(_robot);
+		spiral = new Spiral(robot);
 	}
 	
 	@Test
 	public void assureThatRobotWalksSpiral() {
-		InOrder inorder = inOrder(_robot);
+		InOrder inorder = inOrder(robot);
 		
-		_spiral.walkSpiral();
+		spiral.walkSpiral();
 		
-		inorder.verify(_robot).move(1);
-		inorder.verify(_robot).turnleft(90);
-		inorder.verify(_robot).move(1);
-		inorder.verify(_robot).turnleft(90);
+		inorder.verify(robot).move(1);
+		inorder.verify(robot).turnleft(90);
+		inorder.verify(robot).move(1);
+		inorder.verify(robot).turnleft(90);
 
-		inorder.verify(_robot).move(2);
-		inorder.verify(_robot).turnleft(90);
-		inorder.verify(_robot).move(2);
-		inorder.verify(_robot).turnleft(90);
+		inorder.verify(robot).move(2);
+		inorder.verify(robot).turnleft(90);
+		inorder.verify(robot).move(2);
+		inorder.verify(robot).turnleft(90);
 
-		inorder.verify(_robot).move(3);
-		inorder.verify(_robot).turnleft(90);
-		inorder.verify(_robot).move(3);
-		inorder.verify(_robot).turnleft(90);
+		inorder.verify(robot).move(3);
+		inorder.verify(robot).turnleft(90);
+		inorder.verify(robot).move(3);
+		inorder.verify(robot).turnleft(90);
 
-		inorder.verify(_robot).move(4);
-		inorder.verify(_robot).turnleft(90);
-		inorder.verify(_robot).move(4);
-		inorder.verify(_robot).turnleft(90);
+		inorder.verify(robot).move(4);
+		inorder.verify(robot).turnleft(90);
+		inorder.verify(robot).move(4);
+		inorder.verify(robot).turnleft(90);
 
-		inorder.verify(_robot).move(5);
-		inorder.verify(_robot).turnleft(90);
-		inorder.verify(_robot).move(5);
-		inorder.verify(_robot).turnleft(90);
+		inorder.verify(robot).move(5);
+		inorder.verify(robot).turnleft(90);
+		inorder.verify(robot).move(5);
+		inorder.verify(robot).turnleft(90);
 	}
 
 }
