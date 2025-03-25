@@ -3,26 +3,26 @@ package de.syngenio.demo2;
 
 public class Controller {
 	
-	private Sensor _sensor;
-	private Actor _actor;
+	private Sensor sensor;
+	private Actor actor;
 	
 	public Controller(Sensor sensor, Actor actor) {
-		_sensor = sensor;
-		_actor = actor;
+		this.sensor = sensor;
+		this.actor = actor;
 		
 	}
 	
 	public void singleDecision() {
-		if (_sensor.isMotorBlocked()) {
-			_actor.stopMotor();
+		if (sensor.isMotorBlocked()) {
+			actor.stopMotor();
 		} else {
 			int desiredTemperature;
-			if (_sensor.getBrightness() < 10) {
+			if (sensor.getBrightness() < 10) {
 				desiredTemperature = 15;
 			} else {
 				desiredTemperature = 20;
 			}
-			_actor.moveMotor(desiredTemperature - _sensor.getTemperature());
+			actor.moveMotor(desiredTemperature - sensor.getTemperature());
 		}
 	}
 }
