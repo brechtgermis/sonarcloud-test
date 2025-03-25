@@ -2,36 +2,36 @@ package de.syngenio.robot;
 
 public class Spiral {
 
-	private Robot _robot;
+	private Robot robot;
 
 	public Spiral(Robot robot) {
-		_robot = robot;
+		this.robot = robot;
 	}
 	
 	public void walkSpiral() {
-		_robot.move(1);
-		_robot.turnleft(90);
-		_robot.move(1);
-		_robot.turnleft(90);
+		robot.move(1);
+		robot.turnleft(90);
+		robot.move(1);
+		robot.turnleft(90);
 
-		_robot.move(2);
-		_robot.turnleft(90);
-		_robot.move(2);
-		_robot.turnleft(90);
+		robot.move(2);
+		robot.turnleft(90);
+		robot.move(2);
+		robot.turnleft(90);
 
-		_robot.move(3);
-		_robot.turnleft(90);
-		_robot.move(3);
-		_robot.turnleft(90);
+		robot.move(3);
+		robot.turnleft(90);
+		robot.move(3);
+		robot.turnleft(90);
 
-		_robot.move(4);
-		_robot.turnleft(90);
-		_robot.move(4);
-		_robot.turnleft(90);
+		robot.move(4);
+		robot.turnleft(90);
+		robot.move(4);
+		robot.turnleft(90);
 
-		_robot.move(5);
-		_robot.turnleft(90);
-		_robot.move(5);
-		_robot.turnleft(90);
+		robot.move(5);
+		robot.turnleft(90);
+		robot.move(5);
+		robot.turnleft(90);
 	}
 }
