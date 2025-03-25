@@ -7,22 +7,22 @@ public class Controller {
 	private Actor actor;
 	
 	public Controller(Sensor sensor, Actor actor) {
-		sensor = sensor;
-		actor = actor;
+		this.sensor = sensor;
+		this.actor = actor;
 		
 	}
 	
 	public void singleDecision() {
-		if (sensor.isMotorBlocked()) {
-			actor.stopMotor();
+		if (this.sensor.isMotorBlocked()) {
+			this.actor.stopMotor();
 		} else {
 			int desiredTemperature;
-			if (sensor.getBrightness() < 10) {
+			if (this.sensor.getBrightness() < 10) {
 				desiredTemperature = 15;
 			} else {
 				desiredTemperature = 20;
 			}
-			actor.moveMotor(desiredTemperature - sensor.getTemperature());
+			this.actor.moveMotor(desiredTemperature - this.sensor.getTemperature());
 		}
 	}
 }
