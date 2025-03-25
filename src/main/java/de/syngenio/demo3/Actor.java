@@ -9,12 +9,19 @@ public class Actor {
 		 * If the amount is negative, the motor should be moved in the direction of cooling.
 		 * The motor should be stopped if the amount is 0.
 		*/
-		throw new UnsupportedOperationException("Not yet implemented");
+		 if (amount > 0) {
+            System.out.println("Moving motor in the direction of heating by " + amount);
+        } else if (amount < 0) {
+            System.out.println("Moving motor in the direction of cooling by " + (-amount));
+        } else {
+            System.out.println("Stopping motor");
+        }
+    }
 	};
 	public void stopMotor() {
 		/*
 		 * This method should stop the motor.
 		*/
-		throw new UnsupportedOperationException("Not yet implemented");
+		System.out.println("Stopping motor");
 	};
 }
