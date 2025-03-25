@@ -3,8 +3,8 @@ package de.syngenio.demo2;
 
 public class Controller {
 	
-	private Sensor _sensor;
-	private Actor _actor;
+	private Sensor sensor;
+	private Actor actor;
 	
 	public Controller(Sensor sensor, Actor actor) {
 		_sensor = sensor;
