@@ -52,4 +52,13 @@ public class TestController {
 
 	}
 
+	@Test
+	public void assureDesiredTemperatureIsCorrect() {
+		when(_sensor.isMotorBlocked()).thenReturn(false);
+		when(_sensor.getBrightness()).thenReturn(9);
+		doReturn(30).when(_sensor).getTemperature();
+		_controller.singleDecision();
+		verify(_actor).moveMotor(-15);
+	}
+
 }
